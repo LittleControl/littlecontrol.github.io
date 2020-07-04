@@ -11,4 +11,4 @@
   - (`重度妄想症`,`中度拖延症`,`轻度强迫症`) =>  `中度焦虑症(大概,大雾)`
   - 渴望卫宫切嗣一样的信仰
 
-My Main Site: <http://www.littlecontrol.cn/>
+My Main Site: [http://www.littlecontrol.cn](http://www.littlecontrol.cn)
