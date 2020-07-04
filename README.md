@@ -1,3 +1,3 @@
 # littlecontrol.github.io
 
-My static hexo blogs
+My static blogs
