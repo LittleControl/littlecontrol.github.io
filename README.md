@@ -1,4 +1,4 @@
-# 关于我自己无法承认我自己是一介废柴这件事
+# 关于自己无法承认自己是一介废柴这件事
 
 - 姓名: LittleControl Lee
 - 出生年: 1999
@@ -11,4 +11,6 @@
   - (`重度妄想症`,`中度拖延症`,`轻度强迫症`) =>  `中度焦虑症(大概,大雾)`
   - 渴望卫宫切嗣一样的信仰
 
-My Main Site: <http://www.littlecontrol.cn/>
+## 游离于颓靡之际,独醉于幻想之中
+
+My Main Site: [http://www.littlecontrol.cn](http://www.littlecontrol.cn)
