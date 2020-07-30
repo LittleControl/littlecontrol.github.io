@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Java里有关匿名的一些笔记整理 | 小控酱的幻想乡</title>
+    <meta name="generator" content="VuePress 1.5.2">
+    <link rel="icon" href="/img/fav.ico">
+    <meta name="description" content="游离于颓靡之际,独醉于幻想之中">
+    <meta name="keywords" content="小控酱,littlecontrol,李小控,blog">
+    <link rel="preload" href="/assets/css/0.styles.7d2c80c1.css" as="style"><link rel="preload" href="/assets/js/app.4857b130.js" as="script"><link rel="preload" href="/assets/js/2.09874a81.js" as="script"><link rel="preload" href="/assets/js/37.523b9ec8.js" as="script"><link rel="prefetch" href="/assets/js/10.d48ce954.js"><link rel="prefetch" href="/assets/js/11.57957e62.js"><link rel="prefetch" href="/assets/js/12.2c4977ec.js"><link rel="prefetch" href="/assets/js/13.da9dd83a.js"><link rel="prefetch" href="/assets/js/14.ef0fa2ab.js"><link rel="prefetch" href="/assets/js/15.cacbde45.js"><link rel="prefetch" href="/assets/js/16.335778b1.js"><link rel="prefetch" href="/assets/js/17.3455bb83.js"><link rel="prefetch" href="/assets/js/18.b2c450ac.js"><link rel="prefetch" href="/assets/js/19.4d8219b9.js"><link rel="prefetch" href="/assets/js/20.e4d70f45.js"><link rel="prefetch" href="/assets/js/21.de3bc112.js"><link rel="prefetch" href="/assets/js/22.4a8518b6.js"><link rel="prefetch" href="/assets/js/23.8a912516.js"><link rel="prefetch" href="/assets/js/24.9a988786.js"><link rel="prefetch" href="/assets/js/25.b6f60fa7.js"><link rel="prefetch" href="/assets/js/26.2a185a48.js"><link rel="prefetch" href="/assets/js/27.5e1c6eff.js"><link rel="prefetch" href="/assets/js/28.8cce1652.js"><link rel="prefetch" href="/assets/js/29.9868b513.js"><link rel="prefetch" href="/assets/js/3.c33a2f86.js"><link rel="prefetch" href="/assets/js/30.5f6e5072.js"><link rel="prefetch" href="/assets/js/31.80ce430c.js"><link rel="prefetch" href="/assets/js/32.bcfd55ff.js"><link rel="prefetch" href="/assets/js/33.2362ffe8.js"><link rel="prefetch" href="/assets/js/34.7168e343.js"><link rel="prefetch" href="/assets/js/35.48360f92.js"><link rel="prefetch" href="/assets/js/36.048e39de.js"><link rel="prefetch" href="/assets/js/38.213ae71e.js"><link rel="prefetch" href="/assets/js/39.756902f3.js"><link rel="prefetch" href="/assets/js/4.4bce93dc.js"><link rel="prefetch" href="/assets/js/40.b32b49a4.js"><link rel="prefetch" href="/assets/js/41.649947fc.js"><link rel="prefetch" href="/assets/js/42.59bebb87.js"><link rel="prefetch" href="/assets/js/43.8577e6fa.js"><link rel="prefetch" href="/assets/js/44.199a1ab5.js"><link rel="prefetch" href="/assets/js/45.b4f726ad.js"><link rel="prefetch" href="/assets/js/46.6dfffd8b.js"><link rel="prefetch" href="/assets/js/47.2d5f2a7e.js"><link rel="prefetch" href="/assets/js/48.76bc4dbb.js"><link rel="prefetch" href="/assets/js/49.6d744a4b.js"><link rel="prefetch" href="/assets/js/5.a71463cd.js"><link rel="prefetch" href="/assets/js/50.1de034ac.js"><link rel="prefetch" href="/assets/js/51.63e9f068.js"><link rel="prefetch" href="/assets/js/52.7c1f4f14.js"><link rel="prefetch" href="/assets/js/53.af12dd19.js"><link rel="prefetch" href="/assets/js/54.54c075e4.js"><link rel="prefetch" href="/assets/js/55.adbb361c.js"><link rel="prefetch" href="/assets/js/56.14ef8cb6.js"><link rel="prefetch" href="/assets/js/57.4df08104.js"><link rel="prefetch" href="/assets/js/58.e7c22109.js"><link rel="prefetch" href="/assets/js/59.eb3f6287.js"><link rel="prefetch" href="/assets/js/6.c600004f.js"><link rel="prefetch" href="/assets/js/60.584922f6.js"><link rel="prefetch" href="/assets/js/61.a3222b03.js"><link rel="prefetch" href="/assets/js/62.c4d1ab83.js"><link rel="prefetch" href="/assets/js/63.a7924293.js"><link rel="prefetch" href="/assets/js/64.1ce43391.js"><link rel="prefetch" href="/assets/js/65.9dbaee2f.js"><link rel="prefetch" href="/assets/js/7.dc9bc295.js"><link rel="prefetch" href="/assets/js/8.ea46eb72.js"><link rel="prefetch" href="/assets/js/9.41d55db4.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.7d2c80c1.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><img src="/img/logo.jpg" alt="小控酱的幻想乡" class="logo"> <span class="site-name can-hide">小控酱的幻想乡</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/" class="nav-link">
+  Home
+</a></div><div class="nav-item"><a href="/life/" class="nav-link">
+  Life
+</a></div><div class="nav-item"><a href="/skill/" class="nav-link router-link-active">
+  Skill
+</a></div><div class="nav-item"><a href="https://github.com/LittleControl" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  GitHub
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/" class="nav-link">
+  Home
+</a></div><div class="nav-item"><a href="/life/" class="nav-link">
+  Life
+</a></div><div class="nav-item"><a href="/skill/" class="nav-link router-link-active">
+  Skill
+</a></div><div class="nav-item"><a href="https://github.com/LittleControl" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  GitHub
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div> <!----></nav>  <ul class="sidebar-links"><li><a href="/skill/" aria-current="page" class="sidebar-link">Skill</a></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>Front-End</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading open"><span>Back-End</span> <span class="arrow down"></span></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/skill/30.html" class="sidebar-link">关于RESTful</a></li><li><a href="/skill/22.html" class="sidebar-link">基于搭建LAMP搭建typecho中遇到的问题</a></li><li><a href="/skill/03.html" aria-current="page" class="active sidebar-link">Java里有关匿名的一些笔记整理</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/skill/03.html#抽象类里的匿名" class="sidebar-link">抽象类里的匿名</a></li><li class="sidebar-sub-header"><a href="/skill/03.html#接口里的匿名" class="sidebar-link">接口里的匿名</a></li></ul></li><li><a href="/skill/02.html" class="sidebar-link">线程的生命周期</a></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="java里有关匿名的一些笔记整理"><a href="#java里有关匿名的一些笔记整理" class="header-anchor">#</a> Java里有关匿名的一些笔记整理</h1> <p>刚开始学Java,对于匿名函数啥的一脸懵逼,这不最近又忘了嘛,这次直接把之前的笔记拿出来了<br>
+果然好记性不如烂笔头</p> <h2 id="抽象类里的匿名"><a href="#抽象类里的匿名" class="header-anchor">#</a> 抽象类里的匿名</h2> <ol><li><p>非匿名抽象类的非匿名对象（正常默认的情况）</p> <div class="language-Java extra-class"><pre class="language-java"><code><span class="token keyword">package</span> <span class="token namespace">top<span class="token punctuation">.</span>littlecontrol</span><span class="token punctuation">;</span>
+
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">NoName</span> <span class="token punctuation">{</span>
+    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token class-name">String</span><span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token class-name">Ab2</span> ab2<span class="token operator">=</span><span class="token keyword">new</span> <span class="token class-name">Ab2</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        ab2<span class="token punctuation">.</span><span class="token function">sayName</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment">//李</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+<span class="token keyword">abstract</span> <span class="token keyword">class</span> <span class="token class-name">Ab1</span><span class="token punctuation">{</span>
+    <span class="token class-name">String</span> name<span class="token operator">=</span><span class="token string">&quot;李&quot;</span><span class="token punctuation">;</span>
+    <span class="token keyword">abstract</span> <span class="token keyword">void</span> <span class="token function">sayName</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token keyword">class</span> <span class="token class-name">Ab2</span> <span class="token keyword">extends</span> <span class="token class-name">Ab1</span><span class="token punctuation">{</span>
+
+    <span class="token annotation punctuation">@Override</span>
+    <span class="token keyword">void</span> <span class="token function">sayName</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token comment">// TODO Auto-generated method stub</span>
+        <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">.</span>name<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre></div></li> <li><p>非匿名抽象类的匿名对象</p> <div class="language-Java extra-class"><pre class="language-java"><code>    <span class="token keyword">new</span> <span class="token class-name">Ab2</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">sayName</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment">//李</span>
+</code></pre></div></li> <li><p>匿名抽象类的非匿名对象</p> <div class="language-Java extra-class"><pre class="language-java"><code><span class="token class-name">Ab1</span> ab1<span class="token operator">=</span><span class="token keyword">new</span> <span class="token class-name">Ab1</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token annotation punctuation">@Override</span>
+    <span class="token keyword">void</span> <span class="token function">sayName</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token comment">// TODO Auto-generated method stub</span>
+        <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">.</span>name<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+ab1<span class="token punctuation">.</span><span class="token function">sayName</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment">//李</span>
+</code></pre></div></li> <li><p>匿名抽象类的匿名对象</p> <div class="language-Java extra-class"><pre class="language-java"><code><span class="token keyword">new</span> <span class="token class-name">Ab1</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token annotation punctuation">@Override</span>
+    <span class="token keyword">void</span> <span class="token function">sayName</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token comment">// TODO Auto-generated method stub</span>
+        <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">.</span>name<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">.</span><span class="token function">sayName</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment">//李</span>
+</code></pre></div></li></ol> <h2 id="接口里的匿名"><a href="#接口里的匿名" class="header-anchor">#</a> 接口里的匿名</h2> <ol><li><p>非匿名接口的非匿名对象</p> <div class="language-Java extra-class"><pre class="language-java"><code><span class="token keyword">package</span> <span class="token namespace">top<span class="token punctuation">.</span>littlecontrol</span><span class="token punctuation">;</span>
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">NoName_interface</span> <span class="token punctuation">{</span>
+    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token class-name">String</span><span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token class-name">Name</span> n1<span class="token operator">=</span><span class="token keyword">new</span> <span class="token class-name">ExName</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        n1<span class="token punctuation">.</span><span class="token function">sayName</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+<span class="token keyword">interface</span> <span class="token class-name">Name</span><span class="token punctuation">{</span>
+    <span class="token class-name">String</span> name<span class="token operator">=</span><span class="token string">&quot;控&quot;</span><span class="token punctuation">;</span>
+    <span class="token keyword">void</span> <span class="token function">sayName</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token keyword">interface</span> <span class="token class-name">Age</span> <span class="token keyword">extends</span> <span class="token class-name">Name</span><span class="token punctuation">{</span>
+    <span class="token keyword">int</span> age<span class="token operator">=</span><span class="token number">18</span><span class="token punctuation">;</span>
+    <span class="token keyword">void</span> <span class="token function">sayAge</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token keyword">class</span> <span class="token class-name">ExName</span> <span class="token keyword">implements</span> <span class="token class-name">Name</span><span class="token punctuation">,</span><span class="token class-name">Age</span><span class="token punctuation">{</span>
+
+    <span class="token annotation punctuation">@Override</span>
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">sayName</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>name<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token annotation punctuation">@Override</span>
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">sayAge</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>age<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre></div></li> <li><p>非匿名接口的匿名对象</p> <div class="language-Java extra-class"><pre class="language-java"><code><span class="token keyword">new</span> <span class="token class-name">Name</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token annotation punctuation">@Override</span>
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">sayName</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>name<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">.</span><span class="token function">sayName</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre></div></li> <li><p>匿名接口的非匿名对象</p> <div class="language-Java extra-class"><pre class="language-java"><code><span class="token class-name">Age</span> a1<span class="token operator">=</span><span class="token keyword">new</span> <span class="token class-name">Age</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token annotation punctuation">@Override</span>
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">sayName</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>name<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token annotation punctuation">@Override</span>
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">sayAge</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>age<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+a1<span class="token punctuation">.</span><span class="token function">sayName</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment">//控</span>
+a1<span class="token punctuation">.</span><span class="token function">sayAge</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment">//18</span>
+</code></pre></div></li> <li><p>匿名接口的匿名对象</p> <div class="language-Java extra-class"><pre class="language-java"><code><span class="token keyword">new</span> <span class="token class-name">Age</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span><span class="token comment">//匿名接口的匿名对象</span>
+    <span class="token annotation punctuation">@Override</span>
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">sayName</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>name<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token annotation punctuation">@Override</span>
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">sayAge</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>age<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">.</span><span class="token function">sayName</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment">//控</span>
+</code></pre></div></li></ol></div> <footer class="page-edit"><!----> <div class="last-updated"><span class="prefix">Last Updated:</span> <span class="time">7/30/2020, 11:25:36 PM</span></div></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/skill/22.html" class="prev">
+        基于搭建LAMP搭建typecho中遇到的问题
+      </a></span> <span class="next"><a href="/skill/02.html">
+        线程的生命周期
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/assets/js/app.4857b130.js" defer></script><script src="/assets/js/2.09874a81.js" defer></script><script src="/assets/js/37.523b9ec8.js" defer></script>
+  </body>
+</html>
