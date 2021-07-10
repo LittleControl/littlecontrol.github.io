@@ -1,10 +1,4 @@
----
-description: 'My Self, My Life'
----
+# 不如好好生活
 
-# Life
-
-### Nothing To Do
-
-But Love!
-
+年少时,我们因谁因爱或是只因寂寞而同场起舞  
+沧桑后,我们何因何故寂寞如初却宁愿形同陌路。
