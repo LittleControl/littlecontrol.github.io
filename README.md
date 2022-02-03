@@ -3,4 +3,4 @@
 >年少时,我们因谁因爱或是只因寂寞而同场起舞  
 >沧桑后,我们何因何故寂寞如初却宁愿形同陌路。
 
-[我的技术博客](https://blog.littlecontrol.me)
+[我的博客](https://blog.littlecontrol.me)
