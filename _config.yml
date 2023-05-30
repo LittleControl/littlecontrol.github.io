@@ -2,10 +2,13 @@ title: LittleControl'Blog
 description: LittleControl'Blog
 theme: just-the-docs
 
-url: https://littlecontrol.github.io
+baseurl: ""
+url: https://blog.littlecontrol.me
 
-aux_links:
-  Template Repository: https://github.com/littlecontrol
+# aux_links:
+#   Template Repository: https://github.com/littlecontrol
 
 plugins:
   - jekyll-default-layout
+  - jekyll-seo-tag
+  - jekyll-github-metadata
