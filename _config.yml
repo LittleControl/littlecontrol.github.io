@@ -10,5 +10,5 @@ url: https://blog.littlecontrol.me
 
 plugins:
   - jekyll-default-layout
-  - jekyll-seo-tag
-  - jekyll-github-metadata
+  # - jekyll-seo-tag
+  # - jekyll-github-metadata
