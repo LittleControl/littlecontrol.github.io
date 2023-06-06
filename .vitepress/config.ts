@@ -3,7 +3,7 @@ import { defineConfig } from "vitepress";
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
   title: "LittleControl's Blog",
-  description: "A VitePress Site",
+  description: "小控的理想乡",
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
     nav: [
@@ -24,8 +24,13 @@ export default defineConfig({
     socialLinks: [
       { icon: "github", link: "https://github.com/vuejs/vitepress" },
     ],
+    search: {
+      provider: "local",
+    },
   },
   markdown: {
     lineNumbers: true,
   },
+  cleanUrls: true,
+  lastUpdated: true,
 });
