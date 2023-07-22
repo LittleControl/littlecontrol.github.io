@@ -4,19 +4,23 @@ import { defineConfig } from "vitepress";
 export default defineConfig({
   title: "LittleControl's Blog",
   description: "小控的理想乡",
+  srcDir: "blogs",
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
     nav: [
       { text: "Home", link: "/" },
-      { text: "Examples", link: "/markdown-examples" },
+      { text: "Database", link: "/database" },
+      { text: "Development", link: "/development" },
+      { text: "Archive", link: "/archive" },
     ],
 
     sidebar: [
       {
-        text: "Examples",
+        text: "Directory",
         items: [
-          { text: "Markdown Examples", link: "/markdown-examples" },
-          { text: "Runtime API Examples", link: "/api-examples" },
+          { text: "Database", link: "/database" },
+          { text: "Development", link: "/development" },
+          { text: "Archive", link: "/archive" },
         ],
       },
     ],
