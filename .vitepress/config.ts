@@ -18,9 +18,9 @@ export default defineConfig({
       {
         text: "Directory",
         items: [
-          { text: "Database", link: "/database" },
-          { text: "Development", link: "/development" },
-          { text: "Archive", link: "/archive" },
+          { text: "Database", link: "/database/index" },
+          { text: "Development", link: "/development/index" },
+          { text: "Archive", link: "/archive/index" },
         ],
       },
     ],
