@@ -17,8 +17,7 @@ vendor/
 .vitepress/cache
 node_modules
 
-*.lock
+.hugo_build.lock
 package-lock.json
 resources/
 public/
-pnpm-lock.yaml
